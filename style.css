@@ -129,6 +129,90 @@ body {
 
 
 
+/* Contact Page Styles */
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(45, 45, 45, 0.25);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: var(--transition);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.telegram-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 136, 204, 0.3);
+    border-color: rgba(0, 136, 204, 0.5);
+}
+
+.email-card:hover {
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.3);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+.card-icon {
+    font-size: 2rem;
+    min-width: 50px;
+    text-align: center;
+}
+
+.telegram-card .card-icon {
+    color: #0088cc;
+}
+
+.email-card .card-icon {
+    color: var(--accent-blue);
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Responsive Contact Cards */
+@media (max-width: 768px) {
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
 /* Footer */
 .footer {
     margin-top: auto;
